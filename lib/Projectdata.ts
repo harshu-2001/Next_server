@@ -7,9 +7,24 @@ type Projects = {
 }
 
 let project : Projects[] = [
+  { _id: 13,
+    Projects: "Next_Apis",
+    Project_links: "https://github.com/harshu-2001/Next_server",
+    Project_description: ""
+  },
+  { _id: 12,
+    Projects: "Think.",
+    Project_links: "https://apkpure.net/think/com.onedeveloper.think",
+    Project_description: ""
+  },
+  { _id: 11,
+    Projects: "Quotes",
+    Project_links: "https://apkpure.net/quotes/com.onedeveloper.jetpackcompose",
+    Project_description: ""
+  },
   { _id: 4,
     Projects: "Pixel Prfect",
-    Project_links: "na",
+    Project_links: "https://play.google.com/store/apps/details?id=z1tech.photo.editor",
     Project_description: "All-in-one photo editor and gallery app.: Enhance your images, apply filters, organize your gallery, and unleash your creativity."
   },
   {
@@ -21,7 +36,7 @@ let project : Projects[] = [
   {
     _id: 3,
     Projects: "Flapster",
-    Project_links: "na",
+    Project_links: "https://play.google.com/store/apps/details?id=z1tech.flapster",
     Project_description: "Kotlin-built game app, reminiscent of Flappy Bird.: Test your skills, navigate obstacles, and compete for high scores."
   },
   {
@@ -63,13 +78,13 @@ let project : Projects[] = [
   {
     _id: 8,
     Projects: "Crop pest detection using YOLOv5 Android APP ",
-    Project_links: "na",
+    Project_links: "https://github.com/harshu-2001/Farmaid-app",
     Project_description: "Flutter app utilizing YOLOv5 model for live detection of 20 types of pests.: Get instant identification and effective remedies to safeguard your crops and maximize yield."
   },
   {
     _id: 10,
     Projects: "News App(Rocket News)",
-    Project_links: "na",
+    Project_links: "https://github.com/harshu-2001/Rocket-news",
     Project_description: " Flutter-based app utilizing REST API to fetch the latest news. Stay informed with a user-friendly interface, personalized news categories, and timely updates, all in one convenient application."
   }];
 
