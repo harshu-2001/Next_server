@@ -53,9 +53,7 @@ export default function HeroSection() {
             <h2 data-aos="fade-up" data-aos-delay="100" className="aos-init aos-animate">
               Elevating Concepts to Reality: Explore My Work Here!
             </h2>
-            <p data-aos="fade-up" data-aos-delay="200" className="aos-init aos-animate">
-              I'm Harsh Shrivastava (Software Developer)
-            </p>
+            <p data-aos="fade-up" data-aos-delay="200" className="aos-init aos-animate">I&apos;m Harsh Shrivastava (Software Developer)</p>
           </div>
           <div className="col-lg-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
             <form ref={form} onSubmit={handleSubmit}>
