@@ -1,0 +1,359 @@
+@import "./globals";
+@import "./navbar/navbar";
+@import "./media/media";
+@import "./hero/hero";
+@import "./about/about";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.light-background {
+  --background-color: #f9f9f9;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+}
+
+body {
+  color: $color_1;
+  background-color: $background-color_1;
+  font-family: $font-family_1;
+
+}
+
+a {
+  color: $color_2 ;
+  transition: 0.3s ;
+  text-decoration: none !important;
+
+  &:hover {
+    color: $color_3 ;
+    text-decoration: none ;
+  }
+}
+
+h1 {
+  color: $color_4;
+  font-family: $font-family_2;
+}
+
+h2 {
+  color: $color_4;
+  font-family: $font-family_2;
+}
+
+h3 {
+  color: $color_4;
+  font-family: $font-family_2;
+}
+
+h4 {
+  color: $color_4;
+  font-family: $font-family_2;
+}
+
+h5 {
+  color: $color_4;
+  font-family: $font-family_2;
+}
+
+h6 {
+  color: $color_4;
+  font-family: $font-family_2;
+}
+
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background-color: $background-color_4;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+
+  svg {
+    font-size: 24px;
+    color: $color_6;
+    line-height: 0;
+  }
+
+  &:hover {
+    background-color: $background-color_9;
+    color: $color_6;
+  }
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.page-title {
+  color: $color_1;
+  background-color: $background-color_1;
+  position: relative;
+
+  .heading {
+    padding: 80px 0;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    h1 {
+      font-size: 38px;
+      font-weight: 700;
+    }
+  }
+
+  nav {
+    background-color: $background-color_8;
+    padding: 20px 0;
+
+    ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+
+      li+li {
+        padding-left: 10px;
+
+        &::before {
+          content: "/";
+          display: inline-block;
+          padding-right: 10px;
+          color: $color_14;
+        }
+      }
+    }
+  }
+}
+.footer {
+	color: $color_1;
+	background-color: $background-color_1;
+	font-size: 14px;
+	padding-bottom: 50px;
+	position: relative;
+	.footer-top {
+		padding-top: 50px;
+	}
+	.footer-about {
+		.logo {
+			margin-bottom: 25px;
+			img {
+				max-height: 40px;
+				margin-right: 6px;
+			}
+			span {
+				color: $color_4;
+				font-size: 30px;
+				font-weight: 700;
+				letter-spacing: 1px;
+				font-family: $font-family_2;
+			}
+		}
+		p {
+			font-size: 14px;
+			font-family: $font-family_2;
+		}
+	}
+	.social-links {
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+			font-size: 16px;
+			color: $color_12;
+			margin-right: 10px;
+			transition: 0.3s;
+			&:hover {
+				color: $color_2;
+				border-color: $border-color_1;
+			}
+		}
+	}
+	h4 {
+		font-size: 16px;
+		font-weight: bold;
+		position: relative;
+		padding-bottom: 12px;
+	}
+	.footer-links {
+		margin-bottom: 30px;
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			svg {
+				padding-right: 2px;
+				font-size: 12px;
+				line-height: 0;
+			}
+			li {
+				padding: 10px 0;
+				display: flex;
+				align-items: center;
+				&:first-child {
+					padding-top: 0;
+				}
+			}
+			a {
+				color: $color_13;
+				display: inline-block;
+				line-height: 1;
+				&:hover {
+					color: $color_2;
+				}
+			}
+		}
+	}
+	.footer-contact {
+		p {
+			margin-bottom: 5px;
+		}
+	}
+	.copyright {
+		padding-top: 25px;
+		padding-bottom: 25px;
+		background-color: $background-color_8;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.credits {
+		margin-top: 6px;
+		font-size: 13px;
+	}
+}
+.scroll-top {
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	right: 15px;
+	bottom: 15px;
+	z-index: 99999;
+	background-color: $background-color_4;
+	width: 40px;
+	height: 40px;
+	border-radius: 4px;
+	transition: all 0.4s;
+	svg {
+		font-size: 24px;
+		color: $color_6;
+		line-height: 0;
+	}
+	&:hover {
+		background-color: $background-color_9;
+		color: $color_6;
+	}
+}
+.scroll-top.active {
+	visibility: visible;
+	opacity: 1;
+}
+.page-title {
+	color: $color_1;
+	background-color: $background-color_1;
+	position: relative;
+	.heading {
+		padding: 80px 0;
+		border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+		h1 {
+			font-size: 38px;
+			font-weight: 700;
+		}
+	}
+	nav {
+		background-color: $background-color_8;
+		padding: 20px 0;
+		ol {
+			display: flex;
+			flex-wrap: wrap;
+			list-style: none;
+			margin: 0;
+			font-size: 16px;
+			font-weight: 600;
+			li+li {
+				padding-left: 10px;
+				&::before {
+					content: "/";
+					display: inline-block;
+					padding-right: 10px;
+					color: $color_14;
+				}
+			}
+		}
+	}
+}
+section {
+	color: $color_1;
+	background-color: $background-color_1;
+	padding: 60px 0;
+	scroll-margin-top: 98px;
+	overflow: clip;
+}
+.section {
+	color: $color_1;
+	background-color: $background-color_1;
+	padding: 60px 0;
+	scroll-margin-top: 98px;
+	overflow: clip;
+}
+.section-title {
+	text-align: center;
+	padding-bottom: 60px;
+	position: relative;
+	h2 {
+		font-size: 32px;
+		font-weight: 700;
+		position: relative;
+		&:before {
+			content: "";
+			width: 50px;
+			height: 2px;
+			background: var(--accent-color);
+			display: inline-block;
+			margin: 0 15px 10px 0;
+		}
+		&:after {
+			content: "";
+			width: 50px;
+			height: 2px;
+			background: var(--accent-color);
+			display: inline-block;
+			margin: 0 0 10px 15px;
+		}
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
